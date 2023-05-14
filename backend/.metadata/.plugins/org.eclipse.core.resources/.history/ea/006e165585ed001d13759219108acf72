@@ -1,0 +1,21 @@
+package com.example.instaclone.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.instaclone.enity.User;
+import com.example.instaclone.repository.UserRepository;
+
+public class UserService {
+	
+	@Autowired
+	UserRepository userRepo;
+	
+	public User submitMetaDataOfUser(User user) {
+		return userRepo.save(user);
+	}
+	
+	public User displayUserMetaData(String userId) {
+		return userRepo.findById(userId);
+	}
+
+}

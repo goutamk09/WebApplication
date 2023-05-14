@@ -1,0 +1,25 @@
+package com.example.instaclone.enity;
+
+import javax.persistence.Entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Status {
+	
+	@Id
+	@GeneratedValue
+	private int id;
+	
+	private String statusId;
+	private String userId;
+	private String path;
+	private String userName;
+	private Timestamp timeStamp;
+
+}
